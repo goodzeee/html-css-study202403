@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    a {
+      color: gold;
+    }
+    a:hover {
+      font-size: 20px;
+      font-weight: 700;
+      color: goldenrod;
+    }
+    .box {
+      width: 100px;
+      height: 100px;
+      background: pink;
+      transition: 0.7s;
+    }
+    /* 마우스 올렸을 때 */
+    .box:hover {
+      width: 200px;
+      background: violet;
+    }
+    /* 마우스로 클릭했을 때 */
+    .box:active {
+      height: 200px;
+      background: yellowgreen;
+    }
+    #common {
+      width: 100px;
+      margin-top: 20px;
+      padding: 5px;
+      outline: none;
+      transition: 0.7s;
+    }
+    /* 포커스 되는 스타일 */
+    #common:focus {
+      border-color: red;
+      width: 200px;
+
+    }
+  </style>
+</head>
+<body>
+  
+  <a href="#">Merci!</a>
+
+  <div class="box"></div>
+
+  <input type="text" id="common">
+
+</body>
+</html>

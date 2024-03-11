@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 속성 없이 지정할 수 있는 ! nth-child(위치 번호) */
+    #fruit li:nth-child(4) {
+      color: red;
+    }
+    #food li:last-child {
+      background: rgb(198, 224, 188);
+    }
+    #fruit li:first-child {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    #fruit li:nth-child(2n) {
+      background: brown;
+    }
+    #fruit li:nth-child(2n+1) {
+      background: navajowhite;
+    }
+    #fruit li:nth-child(n+3) {
+      font-style: italic;
+    }
+    /* 부정 not : 메론빵 빼고 스타일 적용 */
+    #food li:not(.melon) {
+      list-style: none;
+    }
+    .sports div:nth-child(2) {
+      background: navy;
+    }
+    .sports div:nth-of-type(3) {
+      color: aqua;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="sports">
+    <div>축구</div>
+    <div>수영</div>
+    <p>스포츠 VS</p>
+    <div>농구</div>
+    <div>배구</div>
+  </div>
+
+  <ul id="food">
+    <li>초코빵</li>
+    <li class="melon">메론빵</li>
+    <li>우유식빵</li>
+    <li>크림빵</li>
+  </ul>
+
+  <ul id="fruit">
+    <li>딸기</li>
+    <li>수박</li>
+    <li>망고</li>
+    <li>사과</li>
+    <li>자몽</li>
+    <li>배</li>
+    <li>멜론</li>
+  </ul>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 후손 선택자 ! */
+    div .tomato {
+      background: yellowgreen;
+    }
+
+    body div em {
+      background: skyblue;
+    }
+  
+    body > div > ul {
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="yello low primary" id="change">안녕하세요</h1>
+
+  <em>파이팅</em>
+
+  <div>
+    <em>해야징</em>
+    <ul>
+      <li id="strawberry" class="green">딸기</li>
+      <li >파인애플</li>
+      <li class="tomato">토마토</li>
+    </ul>
+
+    <div class="green">당근</div>
+    <p>브로콜리</p>
+    <span class="tomato">토마토</span>
+  </div>
+
+</body>
+</html>

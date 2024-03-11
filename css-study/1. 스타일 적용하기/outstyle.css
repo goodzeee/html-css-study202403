@@ -1,0 +1,10 @@
+ul {
+  list-style: none;
+  border: 2px dashed tomato;
+  padding: 0;
+}
+
+li {
+  color: aquamarine;
+  background: salmon;
+}
