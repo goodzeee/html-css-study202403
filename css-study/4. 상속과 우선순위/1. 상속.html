@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* body {
+     제일 부모태그인 곳에 폰트나 글자 설정해서 모두 상속하여 사용
+    } */
+    .eco {
+      width: 400px;
+      height: 450px;
+      border: 3px solid brown;
+      color: aqua;
+      /* 글자, 텍스트 관련만 상속하는 모습 */
+      font-size: 1.5em;
+      letter-spacing: 5px;
+    }
+    .animal {
+      width: 200px;
+      height: 200px;
+      border: 3px solid blue;
+      color:plum
+    }
+    .plant {
+      width: 200px;
+      height: 200px;
+      border: 3px solid yellowgreen;
+      color: navy;
+      font-style: italic;
+    }
+    .plant > div:nth-child(2) {
+      font-weight: 700;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="eco">생태계
+    <div class="animal">동물</div>
+    <div class="plant">식물
+      <div>소나무</div>
+      <div>은행나무</div>
+      <div>국화</div>
+    </div>
+  </div>
+
+</body>
+</html>
