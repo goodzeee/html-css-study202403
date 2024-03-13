@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .ct {
+      width: 700px;
+      padding: 20px;
+      margin: 20px;
+      border: 3px solid;
+      /* 박스 틀에 맞춰서 정렬하기 비추 */
+      /* overflow: hidden; */
+    }
+    /* 박스 틀에 딱 맞춰서 정렬 = 정석 방법 ! */
+    .clearfix::after {
+      clear: both;
+      /* ::after, ::before = content, display 필수 요소 */
+      content: '';
+      display: block;
+    }
+    .box {
+      width: 200px;
+      height: 150px;
+      border: 3px solid green;
+      background: yellowgreen;
+      border-radius: 20px;
+      float: left;
+    }
+    .container1 {
+      border-color: tomato;
+    }
+    .container2 {
+      border-color: blue;
+    }
+    .container3 {
+      border-color: yellowgreen;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="ct clearfix container1">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <div class="ct clearfix container2">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <div class=" ct clearfix container3">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .clearfix::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .container {
+      width: 600px;
+      border: 2px solid gray;
+    }
+    .box {
+      /* 컨테이너틀 600px -> 4개 박스 25%씩 나눠 갖기 */
+      /* 4개 박스 사이에 일정한 간격 주고 싶을 때 :
+        5부분에 1%씩 => 5% 마진 확보 -> 95% / 4박스 너비 = 23.75% / margin-right: 1%씩 주면 됨.*/
+      width: 23.75%;
+      height: 100px;
+      background: orange;
+      border: 2px solid tomato;
+      float: left;
+      margin: 10px 0;
+      margin-right: 1%;
+    }
+    /* 왼쪽에도 1% 해당만큼 퍼센트 주기 */
+    .box:first-child {
+      margin-left: 1%;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container clearfix">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+
+</body>
+</html>
