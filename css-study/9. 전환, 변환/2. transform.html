@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background: pink;
+      margin: 10px;
+      font-size: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 1s;
+    }
+    .box1:hover {
+      /* 회전 rotate */
+      transform: rotate(360deg);
+    }
+    .box2:hover {
+      /* 이동하기 */
+      transform: translate(50px, -30px);
+    }
+    .box3:hover {
+      /* 확대 축소 - 배수로 수 적어주기*/
+      transform: scale(0.7);
+    }
+    .box4:hover {
+      /* 비틀기 효과 */
+      transform: skew(10deg, 50deg);
+    }
+    .box5:hover {
+      transform: rotate(720deg) scale(1.3) translate(30px, 50px);
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="box box1">1</div>
+  <div class="box box2">2</div>
+  <div class="box box3">3</div>
+  <div class="box box4">4</div>
+  <div class="box box5">5</div>
+
+</body>
+</html>
