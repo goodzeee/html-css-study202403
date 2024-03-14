@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      height: 2000px;
+    }
+    header {
+      border-bottom: 2px solid #000;
+      /* position: absolute, fixed 사용시 가로 기본값 100이 깨져서 
+      수동으로 width: 100% 넣어주기 ! */
+      width: 100%;
+      /* positionL fixed -> 언제나 화면전체 기준으로 움직임.
+      스크롤을 내려도 로고 헤더가 고정적으로 보여지게 하기 !! */
+      position: fixed;
+      top: 0;
+    }
+    header h1 {
+      font-size: 40px;
+      padding: 0;
+      margin: 20px 20px 20px;
+      float: left;
+    }
+    /* 수평 배치 float + clear 사용 */
+    header nav {
+      /* background: tomato; */
+      float: right;
+    }
+    header nav ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 30px;
+    }
+    header nav ul li {
+      /* border: 1px solid #000; */
+      float: left;
+      font-size: 1.5em;
+      font-weight: 700;
+      margin-right: 30px;
+    }
+    span {
+      width: 200px;
+      height: 200px;
+      background: orange;
+      font-size: 3em;
+      /* display: block; */
+      margin-top: 150px;
+
+      /* 인라인 요소에 float이나 position: absolute 걸면
+      자동으로 불록요소로 변경됨 */
+      /* float: left; */
+      position: absolute;
+    }
+    .clearfix::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  
+  <header class="clearfix">
+    <h1>Logo</h1>
+    <nav>
+      <ul class="clearfix">
+        <li>소개</li>
+        <li>커뮤니티</li>
+        <li>자료실</li>
+        <li>회원가입</li>
+      </ul>
+    </nav>
+  </header>
+
+  <span>인라인 요소</span>
+
+</body>
+</html>
