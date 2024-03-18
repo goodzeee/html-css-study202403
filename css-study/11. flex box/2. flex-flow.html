@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .wrapper {
+      border: 3px solid #000;
+      padding: 20px;
+      /* flex만 쓰면 어떻게든 짜부돼서 수평 배치함. */
+      display: flex;
+      /* row x축 / column y축 */
+      flex-direction: row;
+      /* 브라우저 늘리던 줄이던 wrap으로 밑으로 떨어지도록 */
+      flex-wrap: wrap;
+    }
+    .box {
+      /* 너비 %로 지정해서 wrap을 추가해서 열 맞춰서 수평 배치 가능 */
+      width: 150px;
+      height: 100px;
+      border: 3px solid red;
+      border-radius: 10px;
+      font-size: 40px;
+    }
+    /* max-width 작아지면 column 수평 배치 되도록 */
+    /* @media (max-width: 700px) { */
+    /* .wrapper { */
+      /* flex-direction: column; */
+
+    /* }
+  } */
+  </style>
+</head>
+<body>
+  
+  <div class="wrapper">
+    <div class="box">A</div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+    <div class="box">D</div>
+    <div class="box">E</div>
+    <div class="box">F</div>
+  </div>
+
+</body>
+</html>
